@@ -98,14 +98,17 @@ def build_index():
 
             for i, chunk in enumerate(chunks):
                 vectors.append(embed(chunk))
-                metadata.append({
-                    "file": file,
-                    "path": os.path.relpath(path, VAULT_PATH),
-                    "date": normalize_metadata(meta.get("date")),
-                    "day": normalize_metadata(meta.get("day")),
-                    "chunk": i,
-                    "text": chunk
-                })
+                
+            metadata.append({
+                "file": file,
+                "path": os.path.relpath(path, VAULT_PATH),
+                "date": normalize_metadata(meta.get("date")),
+                "day": normalize_metadata(meta.get("day")),
+                "type": meta.get("type"),   # <-- THIS IS THE FIX
+                "chunk": i,
+                "text": chunk
+            })
+
 
     if not vectors:
         raise RuntimeError("No vectors generated. Check vault path or note contents.")
