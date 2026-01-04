@@ -98,3 +98,19 @@
 That’s the whole pipeline:
 **notes → chunk → embed → store → retrieve → prompt LLM → answer (with strict no-guess rule).**
 
+My notes:
+
+/home/ethan-silverthorne/Documents/Sync Vault/1 - Overview/Archive/2025/Quater 4/Week 13
+Added YAML to week 13:
+---
+date: 2025-12-23
+day: Tuesday
+week: 13
+type: schedule
+---
+
+using the embedding model: nomic-embed-text
+using FAISS for my vector store
+
+System Model:
+Obsidan Markdown vault -> nomic-embed-text -> FAISS -> code for retrieval and prompt assembly -> ollama -> anwser
