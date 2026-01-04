@@ -99,15 +99,26 @@ def build_index():
             for i, chunk in enumerate(chunks):
                 vectors.append(embed(chunk))
                 
+            rel_path = os.path.relpath(path, VAULT_PATH)
+            key = (rel_path, i)
+
+            old = existing_metadata.get(key, {})
+
             metadata.append({
                 "file": file,
-                "path": os.path.relpath(path, VAULT_PATH),
+                "path": rel_path,
+
+                # ---- Deterministic fields (always recomputed) ----
                 "date": normalize_metadata(meta.get("date")),
                 "day": normalize_metadata(meta.get("day")),
-                "type": meta.get("type"),   # <-- THIS IS THE FIX
+                "type": meta.get("type"),
                 "chunk": i,
-                "text": chunk
-            })
+                "text": chunk,
+
+                # ---- Persistent enrichment fields (preserved) ----
+                "split": old.get("split"),
+                # Upon added new enhancement fields, we will need to update this
+})
 
 
     if not vectors:

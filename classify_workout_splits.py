@@ -54,7 +54,7 @@ def main(write=False):
 
     for entry in metadata:
         # ---- Filters ----
-        if entry.get("type") != "workout":
+        if entry.get("type") != "workouts":
             continue
         if not entry.get("date"):
             continue
