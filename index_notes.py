@@ -49,14 +49,23 @@ def parse_markdown(path):
     with open(path, "r", encoding="utf-8") as f:
         content = f.read()
 
-    if content.startswith("---"):
-        _, fm, body = content.split("---", 2)
-        meta = yaml.safe_load(fm)
-    else:
-        meta = {}
-        body = content
+    meta = {}
+    body = content
 
-    return meta or {}, body.strip()
+    if content.startswith("---"):
+        parts = content.split("---", 2)
+        if len(parts) == 3:
+            _, fm, rest = parts
+            try:
+                meta = yaml.safe_load(fm) or {}
+                body = rest
+            except yaml.YAMLError:
+                # Malformed YAML → ignore frontmatter safely
+                meta = {}
+                body = content
+
+    return meta, body.strip()
+
 
 
 def embed(text):
