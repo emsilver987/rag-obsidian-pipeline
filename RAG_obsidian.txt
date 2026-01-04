@@ -1,0 +1,100 @@
+1. Pick a tight scope (don’t index your whole vault yet)
+
+* Create a folder like: `Vault/AI_Index/`
+* Put only your schedule/workout notes in there (start small, high-signal).
+
+2. Normalize dates so retrieval doesn’t suck
+
+* For schedule notes, add a date header or YAML frontmatter at the top, e.g.
+
+  * `date: 2025-12-13`
+  * `day: Sunday`
+  * `type: schedule`
+* If you skip this, “Sunday the 13th” queries will be unreliable.
+
+3. Choose your local “stack” components
+
+* LLM (generation): your local LLaMA via **Ollama**
+* Embeddings (vectorization): a local embedding model (ex: `nomic-embed-text` or `bge-small`)
+* Vector store (search index): local store like **FAISS** or **Chroma**
+* A small “orchestrator” script/service to glue it together (Python or Node).
+
+4. Load and parse the notes
+
+* Read all `.md` files in `Vault/AI_Index/`
+* For each file, collect:
+
+  * full text
+  * filename
+  * extracted metadata (date/day if present)
+
+5. Chunk the notes (split into retrievable pieces)
+
+* Since your notes are short, keep it simple:
+
+  * chunk size ~250–350 tokens
+  * overlap ~50 tokens
+* Split on headings/paragraphs so chunks stay meaningful.
+
+6. Embed each chunk (turn text into vectors)
+
+* For every chunk:
+
+  * run embedding model locally
+  * store the vector + metadata (file, date, chunk id, etc.)
+
+7. Build the vector database (your searchable index)
+
+* Save all vectors locally in FAISS/Chroma
+* Persist it to disk so you don’t re-embed every time.
+
+8. Add a “query pre-step” for date questions (high leverage for schedules)
+
+* When a user asks: “What was I doing Sunday Dec 13?”
+
+  * extract date hints (Dec + 13 + year if present)
+  * optionally convert to a standard date format
+* Use those hints to bias retrieval (prefer chunks whose file/date matches).
+
+9. Retrieve relevant chunks at question time
+
+* Embed the user’s question
+* Vector search top-k chunks (ex: k=5–10)
+* Apply simple filters or boosts:
+
+  * prefer matching `date` metadata
+  * prefer matching filename patterns
+* Result: a small “context bundle” of the most relevant note text.
+
+10. Compose the final prompt to your local LLaMA
+
+* Send to the LLM:
+
+  * the user question
+  * the retrieved chunks (only those)
+  * strict instruction: “Answer only from context. If missing, say not found.”
+
+11. Generate the answer and enforce guardrails
+
+* If retrieved context is empty or weak: return “Not found in notes.”
+* Keep answers concise (schedules don’t need essays).
+
+12. Test with known queries and fix failure modes
+
+* Test: “What was I doing on 2025-12-13?”
+* Test: “What workout did I do on 2025-12-13?”
+* Test a date you know doesn’t exist → must say “Not found.”
+* If wrong notes are retrieved: adjust chunking, metadata, or date-bias step.
+
+13. Operationalize it (make it easy to use daily)
+
+* Run it as:
+
+  * a local script you call from terminal
+  * a small local web API
+  * or integrated into your Open WebUI workflow (if your setup supports it)
+* Add a “re-index” command for when you add new notes.
+
+That’s the whole pipeline:
+**notes → chunk → embed → store → retrieve → prompt LLM → answer (with strict no-guess rule).**
+

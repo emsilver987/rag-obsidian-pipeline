@@ -1,0 +1,11 @@
+1. "ollama serve" different terminal, to verify it runs curl http://localhost:11434/api/tags
+2. ollama pull <model name>
+3. Run docker image or manually in docker desktop
+docker run -d \
+  --name open-webui \
+  -p 3000:8080 \
+  -e OLLAMA_BASE_URL=http://host.docker.internal:11434 \
+  ghcr.io/open-webui/open-webui:main  
+# network is host which uses local host, port 11434 runs ollama serve by default, and that's the image we want, map to port 3000
+4. http://localhost:3000
+
