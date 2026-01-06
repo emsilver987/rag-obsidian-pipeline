@@ -1,0 +1,126 @@
+import os
+import yaml
+import faiss
+import json
+import requests
+import tiktoken
+import numpy as np
+from datetime import date, datetime
+
+# ---------------------------
+# CONFIG
+# ---------------------------
+VAULT_PATH = "/home/ethan-silverthorne/Documents/Sync Vault/4 - Documents"
+EMBED_MODEL = "nomic-embed-text"
+FAISS_INDEX_PATH = "documents_index.faiss"
+META_PATH = "documents_metadata.json"
+CHUNK_SIZE = 300
+CHUNK_OVERLAP = 50
+OLLAMA_URL = "http://localhost:11434"
+
+# ---------------------------
+# UTILS
+# ---------------------------
+def normalize_metadata(value):
+    if isinstance(value, (date, datetime)):
+        return value.isoformat()
+    return value
+
+
+def tokenize(text):
+    enc = tiktoken.get_encoding("cl100k_base")
+    return enc.encode(text)
+
+
+def detokenize(tokens):
+    enc = tiktoken.get_encoding("cl100k_base")
+    return enc.decode(tokens)
+
+
+def chunk_text(text):
+    tokens = tokenize(text)
+    chunks = []
+    for i in range(0, len(tokens), CHUNK_SIZE - CHUNK_OVERLAP):
+        chunks.append(detokenize(tokens[i:i + CHUNK_SIZE]))
+    return chunks
+
+
+def parse_markdown(path):
+    with open(path, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    meta = {}
+    body = content
+
+    if content.startswith("---"):
+        parts = content.split("---", 2)
+        if len(parts) == 3:
+            _, fm, rest = parts
+            try:
+                meta = yaml.safe_load(fm) or {}
+                body = rest
+            except yaml.YAMLError:
+                # Malformed YAML → ignore frontmatter safely
+                meta = {}
+                body = content
+
+    return meta, body.strip()
+
+
+
+def embed(text):
+    res = requests.post(
+        f"{OLLAMA_URL}/api/embeddings",
+        json={"model": EMBED_MODEL, "prompt": text}
+    )
+    return res.json()["embedding"]
+
+
+# ---------------------------
+# INDEXING
+# ---------------------------
+def build_index():
+    vectors = []
+    metadata = []
+
+    for root, _, files in os.walk(VAULT_PATH):
+        for file in files:
+            if not file.endswith(".md"):
+                continue
+
+            full_path = os.path.join(root, file)
+            rel_path = os.path.relpath(full_path, VAULT_PATH)
+
+            # Build embedding text (THIS IS THE KEY CHANGE)
+            embed_text = f"""
+Filename: {file}
+Path: {rel_path}
+"""
+
+            vector = embed(embed_text)
+            vectors.append(vector)
+
+            metadata.append({
+                "file": file,
+                "path": rel_path,
+                "type": "filename",   # optional but useful
+            })
+
+    if not vectors:
+        raise RuntimeError("No files indexed.")
+
+    dim = len(vectors[0])
+    index = faiss.IndexFlatL2(dim)
+    index.add(np.array(vectors).astype("float32"))
+
+    faiss.write_index(index, FAISS_INDEX_PATH)
+
+    with open(META_PATH, "w") as f:
+        json.dump(metadata, f, indent=2)
+
+    print(f"Indexed {len(vectors)} filenames.")
+
+if __name__ == "__main__":
+    build_index()
+
+
