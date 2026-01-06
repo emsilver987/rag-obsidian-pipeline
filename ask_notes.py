@@ -180,9 +180,9 @@ Question:
 """
     print("\nAnswer:\n", chat(prompt))
 
-####
-# workout summaries
-####
+#########################
+### workout summaries
+#########################
 
 def ask_workout_summaries(question):
     index = faiss.read_index(FAISS_INDEX_PATH)
@@ -285,9 +285,9 @@ Question:
 """
     print("\nAnswer:\n", chat(prompt))
 
-##
-# Schedule
-##
+##################################
+######    Schedule
+##################################
 
 def ask_schedule(question):
     index = faiss.read_index(FAISS_INDEX_PATH)
@@ -307,7 +307,9 @@ def ask_schedule(question):
 
         for m in metadata:
             if m.get("type") == "schedule" and m.get("date") == query_date:
-                context.append(m["text"])
+                context.append(
+                f"[Date: {m.get('date')}, File: {m.get('file')}]\n{m['text']}"
+                )
                 print(m["file"], m["date"], m.get("path", ""))
 
         if not context:
@@ -318,7 +320,7 @@ def ask_schedule(question):
 You are answering questions about a day on a personal schedule
 
 The context below is a raw schedule log
-Interpret it directly.
+Summarize what was done for the day. Do not interrupt. Make sure the times match exactly what was given in the document
 
 Context:
 {chr(10).join(context)}
@@ -369,7 +371,7 @@ if __name__ == "__main__":
     while True:
         try:
             choice = int(input("Is your query regarding\n1. Workouts\n2. Schedule\n3. Workout Weekly Summaries\n"))
-            prompt = input("What do you want to know?\n ")
+            prompt = input("What do you want to know?\n")
             if choice == 1:
                 ask_workouts(prompt)
             elif choice == 2:
