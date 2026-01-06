@@ -3,6 +3,8 @@ import faiss
 import requests
 import numpy as np
 import re
+import os
+from ls import list_dir 
 
 # ---------------------------
 # CONFIG
@@ -10,7 +12,9 @@ import re
 LLM_MODEL = "qwen2.5:3b-instruct"
 EMBED_MODEL = "nomic-embed-text"
 FAISS_INDEX_PATH = "index.faiss"
+DOCUMENT_FAISS_INDEX_PATH = "documents_index.faiss"
 META_PATH = "metadata.json"
+DOCUMENT_META_PATH = "documents_metadata.json"
 TOP_K = 5
 OLLAMA_URL = "http://localhost:11434"
 
@@ -89,7 +93,27 @@ Question:
         print("\nAnswer:\n", chat(prompt))
         return
 
-    # ---- 2. Week-based lookup (single or multiple weeks) ----
+    # ---- 2. Week-based lookup (single or multiple weeks) ----def ask_document(path, question):
+    with open(path, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    prompt = f"""
+You are answering questions about a single document.
+
+Rules:
+- Use ONLY the document content below.
+- Do NOT invent information.
+- If the answer is not present, say so.
+- Preserve exact wording when relevant.
+
+Document:
+<<<
+{content}
+>>>
+
+Question:
+{question}
+"""
     weeks = extract_weeks(question)
 
     if weeks:
@@ -365,19 +389,54 @@ Question:
 """
     print("\nAnswer:\n", chat(prompt))
 
+#############
+## Document
+############
+def ask_document(document, question):
+    with open(path, "r", encoding="utf-8") as f:
+        content = f.read()
+        print(content)
+    prompt = f"""
+    You are answering questions about a single document.
+
+    Rules:
+    - Use ONLY the document content below.
+    - Do NOT invent information.
+    - If the answer is not present, say so.
+    - Preserve exact wording when relevant.
+
+    Document:
+    {content}
+
+    Question: {question}
+    """ 
+    print("\nAnwser:\n", chat(prompt))
 
 if __name__ == "__main__":
     import sys
     while True:
         try:
-            choice = int(input("Is your query regarding\n1. Workouts\n2. Schedule\n3. Workout Weekly Summaries\n"))
-            prompt = input("What do you want to know?\n")
+            choice = int(input("Is your query regarding\n1. Workouts\n2. Schedule\n3. Workout Weekly Summaries\n4. Documents\n"))
             if choice == 1:
+                prompt = input("What do you want to know")
                 ask_workouts(prompt)
             elif choice == 2:
+                prompt = input("What do you want to know")
                 ask_schedule(prompt)
             elif choice == 3:
+                prompt = input("What do you want to know")
                 ask_workout_summaries(prompt)
+            elif choice == 4:
+                files = list_dir("/home/ethan-silverthorne/Documents/Sync Vault/4 - Documents")
+                for i, f in enumerate(files):
+                    print(f"{i}: {os.path.basename(f)}")
+
+                selection = int(input("Select a document by number: "))
+                path = files[selection]
+
+                prompt = input("What do you want to know? ")
+                ask_document(path, prompt)
+
         except ValueError:
             print("Must be a valid number")
 

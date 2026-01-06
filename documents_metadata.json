@@ -1,0 +1,677 @@
+[
+  {
+    "file": "IBM offer.md",
+    "path": "IBM offer.md",
+    "type": "filename"
+  },
+  {
+    "file": "Cruise Details.md",
+    "path": "Cruise Details.md",
+    "type": "filename"
+  },
+  {
+    "file": "OBHR Notes.md",
+    "path": "OBHR Notes.md",
+    "type": "filename"
+  },
+  {
+    "file": "LinkedIn Pillars.md",
+    "path": "LinkedIn Pillars.md",
+    "type": "filename"
+  },
+  {
+    "file": "Owen Gertz Meeting.md",
+    "path": "Owen Gertz Meeting.md",
+    "type": "filename"
+  },
+  {
+    "file": "Gemini Firebase Issue Report.md",
+    "path": "PhotoFit AI/Gemini Firebase Issue Report.md",
+    "type": "filename"
+  },
+  {
+    "file": "PhotoFit Docs.md",
+    "path": "PhotoFit AI/PhotoFit Docs.md",
+    "type": "filename"
+  },
+  {
+    "file": "PhotoFit AI Meeting 12-29-25.md",
+    "path": "PhotoFit AI/PhotoFit AI Meeting 12-29-25.md",
+    "type": "filename"
+  },
+  {
+    "file": "PhotoFit AI Meeting 10-26.md",
+    "path": "PhotoFit AI/PhotoFit AI Meeting 10-26.md",
+    "type": "filename"
+  },
+  {
+    "file": "PromoCode Architecutre.md",
+    "path": "PhotoFit AI/PromoCode Architecutre.md",
+    "type": "filename"
+  },
+  {
+    "file": "PhotoFit AI Meeting 12-22-25.md",
+    "path": "PhotoFit AI/PhotoFit AI Meeting 12-22-25.md",
+    "type": "filename"
+  },
+  {
+    "file": "PhotoFit Vision.md",
+    "path": "PhotoFit AI/PhotoFit Vision.md",
+    "type": "filename"
+  },
+  {
+    "file": "PhotoFit AI Meeting 11-5-25.md",
+    "path": "PhotoFit AI/PhotoFit AI Meeting 11-5-25.md",
+    "type": "filename"
+  },
+  {
+    "file": "Blood Pressure.md",
+    "path": "PhotoFit AI/Blood Pressure.md",
+    "type": "filename"
+  },
+  {
+    "file": "Saturday.md",
+    "path": "Templates/Saturday.md",
+    "type": "filename"
+  },
+  {
+    "file": "Wednesday.md",
+    "path": "Templates/Wednesday.md",
+    "type": "filename"
+  },
+  {
+    "file": "Friday.md",
+    "path": "Templates/Friday.md",
+    "type": "filename"
+  },
+  {
+    "file": "Weekly Report Template.md",
+    "path": "Templates/Weekly Report Template.md",
+    "type": "filename"
+  },
+  {
+    "file": "Tuesday.md",
+    "path": "Templates/Tuesday.md",
+    "type": "filename"
+  },
+  {
+    "file": "Monday.md",
+    "path": "Templates/Monday.md",
+    "type": "filename"
+  },
+  {
+    "file": "Thursday.md",
+    "path": "Templates/Thursday.md",
+    "type": "filename"
+  },
+  {
+    "file": "Sunday.md",
+    "path": "Templates/Sunday.md",
+    "type": "filename"
+  },
+  {
+    "file": "ExercAIse Logs.md",
+    "path": "Carreer Advancement/ExercAIse Logs.md",
+    "type": "filename"
+  },
+  {
+    "file": "Job Search.md",
+    "path": "Carreer Advancement/Job Search.md",
+    "type": "filename"
+  },
+  {
+    "file": "Casino Project.md",
+    "path": "Carreer Advancement/Casino Project.md",
+    "type": "filename"
+  },
+  {
+    "file": "Internship (DSA grind).md",
+    "path": "Carreer Advancement/Internship (DSA grind).md",
+    "type": "filename"
+  },
+  {
+    "file": "N8n project.md",
+    "path": "Carreer Advancement/N8n project.md",
+    "type": "filename"
+  },
+  {
+    "file": "Tech Sidequests.md",
+    "path": "Carreer Advancement/Tech Sidequests.md",
+    "type": "filename"
+  },
+  {
+    "file": "Acitve Learning.md",
+    "path": "Carreer Advancement/Acitve Learning.md",
+    "type": "filename"
+  },
+  {
+    "file": "AI Workout Tracker.md",
+    "path": "Carreer Advancement/AI Workout Tracker.md",
+    "type": "filename"
+  },
+  {
+    "file": "Data Structures and Algorithms.md",
+    "path": "Carreer Advancement/Data Structures and Algorithms.md",
+    "type": "filename"
+  },
+  {
+    "file": "IBM Course.md",
+    "path": "Carreer Advancement/IBM Course.md",
+    "type": "filename"
+  },
+  {
+    "file": "Internship Oppurtunities ranked.md",
+    "path": "Carreer Advancement/Internship Oppurtunities ranked.md",
+    "type": "filename"
+  },
+  {
+    "file": "Cold Emailing.md",
+    "path": "Carreer Advancement/Cold Emailing.md",
+    "type": "filename"
+  },
+  {
+    "file": "Leet Code Problems.md",
+    "path": "Carreer Advancement/Leet Code Problems.md",
+    "type": "filename"
+  },
+  {
+    "file": "LinkedIn Activity.md",
+    "path": "Carreer Advancement/LinkedIn Activity.md",
+    "type": "filename"
+  },
+  {
+    "file": "Linkedin Post.md",
+    "path": "Carreer Advancement/Linkedin Post.md",
+    "type": "filename"
+  },
+  {
+    "file": "IBM Interview.md",
+    "path": "Jobs/IBM Interview.md",
+    "type": "filename"
+  },
+  {
+    "file": "Allied Soultions Interview.md",
+    "path": "Jobs/Allied Soultions Interview.md",
+    "type": "filename"
+  },
+  {
+    "file": "Elevance Health.md",
+    "path": "Jobs/Elevance Health.md",
+    "type": "filename"
+  },
+  {
+    "file": "Purdue Computing Carreer Fair Sept 3 and 4.md",
+    "path": "Jobs/Purdue Computing Carreer Fair Sept 3 and 4.md",
+    "type": "filename"
+  },
+  {
+    "file": "DEPARTMENT OF COMPUTER SCIENCE CAREER FAIR.md",
+    "path": "Jobs/DEPARTMENT OF COMPUTER SCIENCE CAREER FAIR.md",
+    "type": "filename"
+  },
+  {
+    "file": "Fall 2025 Engineering, Science, and Tech Connect Purdue in Indianapolis Career Fair.md",
+    "path": "Jobs/Fall 2025 Engineering, Science, and Tech Connect Purdue in Indianapolis Career Fair.md",
+    "type": "filename"
+  },
+  {
+    "file": "Jobs.md",
+    "path": "Jobs/Jobs.md",
+    "type": "filename"
+  },
+  {
+    "file": "CNO Interview.md",
+    "path": "Jobs/CNO Interview.md",
+    "type": "filename"
+  },
+  {
+    "file": "ServiceNow.md",
+    "path": "Jobs/Carreer Fair 9-8/ServiceNow.md",
+    "type": "filename"
+  },
+  {
+    "file": "NorthMark Strategies Group.md",
+    "path": "Jobs/Carreer Fair 9-8/NorthMark Strategies Group.md",
+    "type": "filename"
+  },
+  {
+    "file": "Boeing.md",
+    "path": "Jobs/Carreer Fair 9-8/Boeing.md",
+    "type": "filename"
+  },
+  {
+    "file": "Walmart.md",
+    "path": "Jobs/Carreer Fair 9-8/Walmart.md",
+    "type": "filename"
+  },
+  {
+    "file": "Caterpillar.md",
+    "path": "Jobs/Carreer Fair 9-8/Caterpillar.md",
+    "type": "filename"
+  },
+  {
+    "file": "Allied Solutions.md",
+    "path": "Jobs/Carreer Fair 9-8/Allied Solutions.md",
+    "type": "filename"
+  },
+  {
+    "file": "Elevance Health.md",
+    "path": "Jobs/Carreer Fair 9-8/Elevance Health.md",
+    "type": "filename"
+  },
+  {
+    "file": "MISO.md",
+    "path": "Jobs/Carreer Fair 9-8/MISO.md",
+    "type": "filename"
+  },
+  {
+    "file": "RTX.md",
+    "path": "Jobs/Carreer Fair 9-8/RTX.md",
+    "type": "filename"
+  },
+  {
+    "file": "Meyer Distributing.md",
+    "path": "Jobs/Carreer Fair 9-8/Meyer Distributing.md",
+    "type": "filename"
+  },
+  {
+    "file": "Lockheed Martin.md",
+    "path": "Jobs/Carreer Fair 9-8/Lockheed Martin.md",
+    "type": "filename"
+  },
+  {
+    "file": "JPMorgan Chase.md",
+    "path": "Jobs/Carreer Fair 9-8/JPMorgan Chase.md",
+    "type": "filename"
+  },
+  {
+    "file": "Liberty Mutual.md",
+    "path": "Jobs/Carreer Fair 9-8/Liberty Mutual.md",
+    "type": "filename"
+  },
+  {
+    "file": "John Deere.md",
+    "path": "Jobs/Carreer Fair 9-8/John Deere.md",
+    "type": "filename"
+  },
+  {
+    "file": "Humana.md",
+    "path": "Jobs/Carreer Fair 9-8/Humana.md",
+    "type": "filename"
+  },
+  {
+    "file": "L3Harris Technologies.md",
+    "path": "Jobs/Carreer Fair 9-8/L3Harris Technologies.md",
+    "type": "filename"
+  },
+  {
+    "file": "Peraton.md",
+    "path": "Jobs/Carreer Fair 9-8/Peraton.md",
+    "type": "filename"
+  },
+  {
+    "file": "Sandia National Laboratories.md",
+    "path": "Jobs/Carreer Fair 9-8/Sandia National Laboratories.md",
+    "type": "filename"
+  },
+  {
+    "file": "Deloitte Consulting.md",
+    "path": "Jobs/Carreer Fair 9-8/Deloitte Consulting.md",
+    "type": "filename"
+  },
+  {
+    "file": "National Security Agency.md",
+    "path": "Jobs/Carreer Fair 9-8/National Security Agency.md",
+    "type": "filename"
+  },
+  {
+    "file": "Sallie Mae.md",
+    "path": "Jobs/Carreer Fair 9-8/Sallie Mae.md",
+    "type": "filename"
+  },
+  {
+    "file": "Hackintosh.md",
+    "path": "Archives/Hackintosh.md",
+    "type": "filename"
+  },
+  {
+    "file": "Malynn Doctor Notes.md",
+    "path": "Archives/Malynn Doctor Notes.md",
+    "type": "filename"
+  },
+  {
+    "file": "Drivers license renewal.md",
+    "path": "Archives/Drivers license renewal.md",
+    "type": "filename"
+  },
+  {
+    "file": "Client Schedule.md",
+    "path": "Archives/Client Schedule.md",
+    "type": "filename"
+  },
+  {
+    "file": "Michigan Plans.md",
+    "path": "Archives/Michigan Plans.md",
+    "type": "filename"
+  },
+  {
+    "file": "CS 36300.md",
+    "path": "Archives/CS 36300.md",
+    "type": "filename"
+  },
+  {
+    "file": "PHYS Midterm 8-9pm LE101.md",
+    "path": "Archives/PHYS Midterm 8-9pm LE101.md",
+    "type": "filename"
+  },
+  {
+    "file": "PHYS Problem Quiz.md",
+    "path": "Archives/PHYS Problem Quiz.md",
+    "type": "filename"
+  },
+  {
+    "file": "11-18 MA261 Midterm 2.md",
+    "path": "Archives/11-18 MA261 Midterm 2.md",
+    "type": "filename"
+  },
+  {
+    "file": "Research Topic.md",
+    "path": "Archives/Research Topic.md",
+    "type": "filename"
+  },
+  {
+    "file": "Academic Advising Appointment.md",
+    "path": "Archives/Academic Advising Appointment.md",
+    "type": "filename"
+  },
+  {
+    "file": "MATH I1710.md",
+    "path": "Archives/MATH I1710.md",
+    "type": "filename"
+  },
+  {
+    "file": "Anniversary.md",
+    "path": "Archives/Anniversary.md",
+    "type": "filename"
+  },
+  {
+    "file": "Movies.md",
+    "path": "Archives/Movies.md",
+    "type": "filename"
+  },
+  {
+    "file": "Advising Appointment Notes.md",
+    "path": "Archives/Advising Appointment Notes.md",
+    "type": "filename"
+  },
+  {
+    "file": "Stretching Routine for Good Deadlift Form.md",
+    "path": "Archives/Stretching Routine for Good Deadlift Form.md",
+    "type": "filename"
+  },
+  {
+    "file": "EAPS 10500.md",
+    "path": "Archives/EAPS 10500.md",
+    "type": "filename"
+  },
+  {
+    "file": "Career Advancement.md",
+    "path": "Archives/Career Advancement.md",
+    "type": "filename"
+  },
+  {
+    "file": "v2 slide deck.md",
+    "path": "Archives/v2 slide deck.md",
+    "type": "filename"
+  },
+  {
+    "file": "12-11 CS487 Final (in class).md",
+    "path": "Archives/12-11 CS487 Final (in class).md",
+    "type": "filename"
+  },
+  {
+    "file": "Money Mangement.md",
+    "path": "Archives/Money Mangement.md",
+    "type": "filename"
+  },
+  {
+    "file": "MA261 Midterm 8pm-9pm.md",
+    "path": "Archives/MA261 Midterm 8pm-9pm.md",
+    "type": "filename"
+  },
+  {
+    "file": "Tradition 5.md",
+    "path": "Archives/Tradition 5.md",
+    "type": "filename"
+  },
+  {
+    "file": "ExercAIse Profile Onboarding.md",
+    "path": "Archives/ExercAIse Profile Onboarding.md",
+    "type": "filename"
+  },
+  {
+    "file": "dot env.md",
+    "path": "Archives/dot env.md",
+    "type": "filename"
+  },
+  {
+    "file": "MGMT 20000.md",
+    "path": "Archives/MGMT 20000.md",
+    "type": "filename"
+  },
+  {
+    "file": "Academic Advising Appoitnment.md",
+    "path": "Archives/Academic Advising Appoitnment.md",
+    "type": "filename"
+  },
+  {
+    "file": "Valentines and Birthday Day Ideas.md",
+    "path": "Archives/Valentines and Birthday Day Ideas.md",
+    "type": "filename"
+  },
+  {
+    "file": "Supplementation list and Query with AI.md",
+    "path": "Archives/Supplementation list and Query with AI.md",
+    "type": "filename"
+  },
+  {
+    "file": "Career Fair 2-24-25.md",
+    "path": "Archives/Career Fair 2-24-25.md",
+    "type": "filename"
+  },
+  {
+    "file": "Shopping List 1.md",
+    "path": "Archives/Shopping List 1.md",
+    "type": "filename"
+  },
+  {
+    "file": "Company Missions.md",
+    "path": "Archives/Company Missions.md",
+    "type": "filename"
+  },
+  {
+    "file": "Gratitude List.md",
+    "path": "Archives/Gratitude List.md",
+    "type": "filename"
+  },
+  {
+    "file": "Protein List.md",
+    "path": "Archives/Protein List.md",
+    "type": "filename"
+  },
+  {
+    "file": "Budget Notes.md",
+    "path": "Archives/Budget Notes.md",
+    "type": "filename"
+  },
+  {
+    "file": "Nicotine Quit Plan (8-20 Start).md",
+    "path": "Archives/Nicotine Quit Plan (8-20 Start).md",
+    "type": "filename"
+  },
+  {
+    "file": "Newr Interview.md",
+    "path": "Archives/Newr Interview.md",
+    "type": "filename"
+  },
+  {
+    "file": "Training and Nutrition.md",
+    "path": "Archives/Training and Nutrition.md",
+    "type": "filename"
+  },
+  {
+    "file": "Traffic Ticket.md",
+    "path": "Archives/Traffic Ticket.md",
+    "type": "filename"
+  },
+  {
+    "file": "JUST IN TIME IN-PERSON JOB FAIR.md",
+    "path": "Archives/JUST IN TIME IN-PERSON JOB FAIR.md",
+    "type": "filename"
+  },
+  {
+    "file": "Blood Pressure Notes.md",
+    "path": "Archives/Blood Pressure Notes.md",
+    "type": "filename"
+  },
+  {
+    "file": "Notes From Career Fair 1-27-25.md",
+    "path": "Archives/Notes From Career Fair 1-27-25.md",
+    "type": "filename"
+  },
+  {
+    "file": "Unix user account.md",
+    "path": "Archives/Unix user account.md",
+    "type": "filename"
+  },
+  {
+    "file": "Malynn's Shit.md",
+    "path": "Archives/Malynn's Shit.md",
+    "type": "filename"
+  },
+  {
+    "file": "Subscriptions.md",
+    "path": "Archives/Subscriptions.md",
+    "type": "filename"
+  },
+  {
+    "file": "Blueprint Client Shoot.md",
+    "path": "Archives/Blueprint Client Shoot.md",
+    "type": "filename"
+  },
+  {
+    "file": "Wix info.md",
+    "path": "Archives/Wix info.md",
+    "type": "filename"
+  },
+  {
+    "file": "Training.md",
+    "path": "Archives/Training.md",
+    "type": "filename"
+  },
+  {
+    "file": "CS 40300.md",
+    "path": "Archives/CS 40300.md",
+    "type": "filename"
+  },
+  {
+    "file": "NIFS availability.md",
+    "path": "Archives/NIFS availability.md",
+    "type": "filename"
+  },
+  {
+    "file": "Possible Loan.md",
+    "path": "Archives/Possible Loan.md",
+    "type": "filename"
+  },
+  {
+    "file": "Carrer Fair 4-16-25.md",
+    "path": "Archives/Carrer Fair 4-16-25.md",
+    "type": "filename"
+  },
+  {
+    "file": "Important Career Information.md",
+    "path": "Archives/Important Career Information.md",
+    "type": "filename"
+  },
+  {
+    "file": "PHYS Problem Quiz 1.md",
+    "path": "Archives/PHYS Problem Quiz 1.md",
+    "type": "filename"
+  },
+  {
+    "file": "Lower Back Recovery Plan.md",
+    "path": "Archives/Lower Back Recovery Plan.md",
+    "type": "filename"
+  },
+  {
+    "file": "JVM Neurology.md",
+    "path": "Archives/JVM Neurology.md",
+    "type": "filename"
+  },
+  {
+    "file": "Newr.md",
+    "path": "Archives/Newr.md",
+    "type": "filename"
+  },
+  {
+    "file": "Sleep Hygiene Improvements.md",
+    "path": "Archives/Sleep Hygiene Improvements.md",
+    "type": "filename"
+  },
+  {
+    "file": "Shopping List.md",
+    "path": "Archives/Shopping List.md",
+    "type": "filename"
+  },
+  {
+    "file": "Stress Overview.md",
+    "path": "Archives/Stress Overview.md",
+    "type": "filename"
+  },
+  {
+    "file": "Stress Reduction Tactics.md",
+    "path": "Archives/Stress Reduction Tactics.md",
+    "type": "filename"
+  },
+  {
+    "file": "Tattoo aftercare.md",
+    "path": "Archives/Tattoo aftercare.md",
+    "type": "filename"
+  },
+  {
+    "file": "Nicotine.md",
+    "path": "Archives/Nicotine.md",
+    "type": "filename"
+  },
+  {
+    "file": "PHYS Midterm 2.md",
+    "path": "Archives/PHYS Midterm 2.md",
+    "type": "filename"
+  },
+  {
+    "file": "Passport.md",
+    "path": "Archives/Passport.md",
+    "type": "filename"
+  },
+  {
+    "file": "Habits I would like to implement.md",
+    "path": "Archives/Habits I would like to implement.md",
+    "type": "filename"
+  },
+  {
+    "file": "CS 487 Midterm.md",
+    "path": "Archives/CS 487 Midterm.md",
+    "type": "filename"
+  },
+  {
+    "file": "Amends Tasks.md",
+    "path": "Archives/Amends Tasks.md",
+    "type": "filename"
+  },
+  {
+    "file": "Blood Pressure.md",
+    "path": "Archives/Blood Pressure.md",
+    "type": "filename"
+  }
+]
