@@ -2,13 +2,14 @@
 
 <img width="1910" height="484" alt="image" src="https://github.com/user-attachments/assets/04487c5e-6d83-47a6-8fe7-7546caa2af3f" />
 
+<img width="1235" height="145" alt="Screenshot from 2026-01-05 22-53-33" src="https://github.com/user-attachments/assets/50066d62-827d-4c84-a239-d4ea8e232b27" />
+
 ## Tools and Technologies
 nomic-embed-text model is used to index notes
 
 FAISS also used for indexing
 
 OLLAMA serve running in background to handle embedding and query requests
-
 qwen2.5:3b-instruct is used as the main LLM when querying
 
 Everything here runs entirely locally
