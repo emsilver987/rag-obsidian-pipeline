@@ -191,7 +191,7 @@ def ask_workout_summaries(question):
     
     allowed_indices = [
         i for i, m in enumerate(metadata)
-        if m.get("type") == "workouts_summary"
+        if m.get("type") == "workouts-summary"
     ] 
 
     # ---- 2. Week-based lookup (single or multiple weeks) ----
@@ -206,7 +206,7 @@ def ask_workout_summaries(question):
 
             for m in metadata:
                 path = m.get("path", "")
-                if (m.get("type") == "workouts_summary" and f"Week {week}" in path):
+                if (m.get("type") == "workouts-summary" and f"Week {week}" in path):
                     week_context[week].append(m["text"])
                     print(m["file"], m["date"], path)
 
