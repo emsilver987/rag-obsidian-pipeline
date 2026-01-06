@@ -82,6 +82,17 @@ def embed(text):
 def build_index():
     vectors = []
     metadata = []
+    existing_metadata = {}
+    old_meta = []
+
+    if os.path.exists(META_PATH):
+        with open(META_PATH, "r") as f:
+            old_meta = json.load(f)
+
+    for m in old_meta:
+        key = (m["path"], m["chunk"])
+        existing_metadata[key] = m
+
 
     for root, _, files in os.walk(VAULT_PATH):
         for file in files:
@@ -95,30 +106,29 @@ def build_index():
                 continue
 
             chunks = chunk_text(body)
-
             for i, chunk in enumerate(chunks):
-                vectors.append(embed(chunk))
-                
-            rel_path = os.path.relpath(path, VAULT_PATH)
-            key = (rel_path, i)
+                vector = embed(chunk)
+                vectors.append(vector)
 
-            old = existing_metadata.get(key, {})
+                rel_path = os.path.relpath(path, VAULT_PATH)
+                key = (rel_path, i)
+                old = existing_metadata.get(key, {})
 
-            metadata.append({
-                "file": file,
-                "path": rel_path,
+                metadata.append({
+                    "file": file,
+                    "path": rel_path,
 
-                # ---- Deterministic fields (always recomputed) ----
+                # ---- Deterministic fields ----
                 "date": normalize_metadata(meta.get("date")),
                 "day": normalize_metadata(meta.get("day")),
                 "type": meta.get("type"),
                 "chunk": i,
                 "text": chunk,
 
-                # ---- Persistent enrichment fields (preserved) ----
+                 # ---- Persistent enrichment ----
                 "split": old.get("split"),
-                # Upon added new enhancement fields, we will need to update this
-})
+                })
+
 
 
     if not vectors:

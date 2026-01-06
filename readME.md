@@ -32,4 +32,3 @@ To classifly splits: python classify_split.py
 
 Will eventually want functionaility to be able to index without changing the hardcoded path
 
-### Open to Contributions
