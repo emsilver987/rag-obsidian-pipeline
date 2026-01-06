@@ -1,5 +1,7 @@
 # This project was made to demonsrate my ability to construct and use RAG pipelines
 
+<img width="1910" height="484" alt="image" src="https://github.com/user-attachments/assets/04487c5e-6d83-47a6-8fe7-7546caa2af3f" />
+
 ## Tools and Technologies
 nomic-embed-text model is used to index notes
 
