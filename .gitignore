@@ -17,3 +17,8 @@ build/
 *.egg-info/
 
 metadata.json
+documents_metadata.json
+
+*.faiss
+document_index.faiss
+index.faiss

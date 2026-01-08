@@ -395,7 +395,7 @@ Question:
 def ask_document(document, question):
     with open(path, "r", encoding="utf-8") as f:
         content = f.read()
-        print(content)
+        # print(content) debugging
     prompt = f"""
     You are answering questions about a single document.
 
@@ -433,6 +433,7 @@ if __name__ == "__main__":
 
                 selection = int(input("Select a document by number: "))
                 path = files[selection]
+                print(f"You chose to analyze {path}")
 
                 prompt = input("What do you want to know? ")
                 ask_document(path, prompt)
